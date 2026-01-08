@@ -7,6 +7,9 @@
     <meta name="description" content="Die besten Home-Workout Produkte: Kurzhanteln, Klimmzugstangen & Liegestützgriffe für dein Training zu Hause. Ehrliche Reviews und Tipps.">
     <meta name="robots" content="index,follow">
 
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
     <!-- Open Graph / Social Sharing -->
     <meta property="og:title" content="Home-Workout Guide – Die besten Produkte für dein Training">
     <meta property="og:description" content="Finde hochwertige Hanteln, Klimmzugstangen & Liegestützgriffe für Home-Workouts. Ehrliche Reviews und Produktempfehlungen.">
@@ -29,6 +32,7 @@
         }
 
         html { scroll-behavior: smooth; }
+
         body {
             margin: 0;
             font-family: 'Inter', system-ui, sans-serif;
@@ -61,13 +65,24 @@
             padding: 1rem 0;
         }
 
+        /* Logo */
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
             font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary);
+            font-size: 1.25rem; /* Desktop */
+            color: var(--text);
             text-decoration: none;
         }
 
+        .logo img {
+            height: 70px; /* Desktop */
+            width: auto;
+            display: block;
+        }
+
+        /* Navigation Links */
         .nav-links {
             display: flex;
             gap: 1.8rem;
@@ -120,7 +135,7 @@
 
         .nav-dropdown-menu a:hover { background: #f3f4f6; }
 
-        /* Dropdown sichtbar beim Hover über Trigger oder Menü */
+        /* Dropdown sichtbar beim Hover */
         .nav-dropdown:hover .nav-dropdown-menu {
             display: flex;
         }
@@ -148,25 +163,6 @@
             cursor: pointer;
         }
 
-        @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                flex-direction: column;
-                gap: 1rem;
-                background: #fff;
-                width: 70%;
-                height: 100vh;
-                padding: 2rem;
-                transition: right 0.3s;
-                box-shadow: -4px 0 15px rgba(0,0,0,0.1);
-            }
-            .nav-links.active { right: 0; }
-            .nav-toggle { display: block; }
-            .nav-cta { display: none; }
-        }
-
         /* === Hero Section === */
         .hero {
             padding: 5rem 0 4rem;
@@ -174,7 +170,7 @@
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.5rem; /* Desktop */
             margin-bottom: 1.5rem;
         }
 
@@ -329,10 +325,39 @@
 
         footer a:hover { text-decoration: underline; }
 
-        /* === Responsive === */
+        /* === Media Queries === */
+
+        /* Tablets und kleine Laptops */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                gap: 1rem;
+                background: #fff;
+                width: 70%;
+                height: 100vh;
+                padding: 2rem;
+                transition: right 0.3s;
+                box-shadow: -4px 0 15px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active { right: 0; }
+
+            .nav-toggle { display: block; }
+            .nav-cta { display: none; }
+        }
+
+        /* Smartphones */
         @media (max-width: 640px) {
             .hero h1 { font-size: 2rem; }
+
+            /* Logo kleiner */
+            .logo img { height: 30px; }
+            .logo span { font-size: 1.1rem; }
         }
+
     </style>
 
     <!-- Google tag (gtag.js) -->
@@ -349,7 +374,10 @@
 <header>
   <div class="container">
     <nav class="nav">
-      <a href="index.html" class="logo">Home-Workout Guide</a>
+      <a href="index.html" class="logo">
+          <img src="images/Home_Workout_Logo.png" alt="Home-Workout Guide Logo">
+          <span>Home-Workout Guide</span>
+      </a>
 
       <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
 
@@ -704,3 +732,4 @@
 
 </body>
 </html>
+
