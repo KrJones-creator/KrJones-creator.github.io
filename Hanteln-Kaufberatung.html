@@ -220,7 +220,26 @@
             text-decoration: none;
             font-weight: 400;
         }
-        footer a:hover { text-decoration: underline; }
+        footer a:hover { 
+            text-decoration: underline; 
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
 
     </style>
 
@@ -231,7 +250,10 @@
     <header>
         <div class="container">
           <nav class="nav">
-            <a href="index.html" class="logo">Home-Workout Guide</a>
+            <a href="index.html" class="logo">
+                <img src="Images/Home_Workout_Logo.png" alt="Logo" class="logo-img">
+                Home-Workout Guide
+            </a>
       
             <!-- Hamburger Button -->
             <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
@@ -241,7 +263,7 @@
                 <!-- Hauptwebsite -->
                 <span class="menu-heading">Hauptseite</span>
                 <div class="submenu">
-                    <a href="index.html" target="_blank">Zur Hauptseite</a>
+                    <a href="index.html#kurzhanteln">Zur Hauptseite</a>
                 </div>
       
                 <!-- Produktempfehlungen -->
@@ -282,6 +304,17 @@
         <div class="info-box">
             💡 <strong>Kurz gesagt:</strong> Für die meisten Home-Workouts sind verstellbare
             Kurzhanteln mit ausreichend Gewicht die beste Wahl.
+        </div>
+
+        <div class="cta-box">
+            <h3>Empfohlene Hanteln für Home-Workouts</h3>
+            <p>
+                In meiner Übersicht findest du bewährte Hantelsets mit gutem
+                Preis-Leistungs-Verhältnis – ideal für Training zu Hause.
+            </p>
+            <a href="index.html#kurzhanteln" class="btn-primary">
+                Zu den Kurz- und Langhantel-Empfehlungen
+            </a>
         </div>
 
         <h2>Welche Hanteln sind für Anfänger geeignet?</h2>
@@ -329,16 +362,6 @@
             benötigen aber mehr Platz.
         </p>
 
-        <div class="cta-box">
-            <h3>Empfohlene Hanteln für Home-Workouts</h3>
-            <p>
-                In meiner Übersicht findest du bewährte Hantelsets mit gutem
-                Preis-Leistungs-Verhältnis – ideal für Training zu Hause.
-            </p>
-            <a href="index.html#kurzhanteln" class="btn-primary">
-                Zu den Kurz- und Langhantel-Empfehlungen
-            </a>
-        </div>
 
         <h2>Fazit</h2>
         <p>
