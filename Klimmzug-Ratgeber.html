@@ -220,7 +220,26 @@
             text-decoration: none;
             font-weight: 400;
         }
-        footer a:hover { text-decoration: underline; }
+        footer a:hover { 
+            text-decoration: underline; 
+        }
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+
 
     </style>
 </head>
@@ -230,7 +249,10 @@
     <header>
         <div class="container">
           <nav class="nav">
-            <a href="index.html" class="logo">Home-Workout Guide</a>
+            <a href="index.html" class="logo">
+                <img src="Images/Home_Workout_Logo.png" alt="Logo" class="logo-img">
+                Home-Workout Guide
+            </a>
       
             <!-- Hamburger Button -->
             <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
@@ -240,7 +262,7 @@
                 <!-- Hauptwebsite -->
                 <span class="menu-heading">Hauptseite</span>
                 <div class="submenu">
-                    <a href="https://www.home-workout-guide.de" target="_blank">Zur Hauptseite</a>
+                    <a href="index.html#klimmzug">Zur Hauptseite</a>
                 </div>
       
                 <!-- Produktempfehlungen -->
@@ -284,6 +306,17 @@
             für den Türrahmen die beste Wahl, sofern der Rahmen stabil genug ist.
         </div>
 
+        <div class="cta-box">
+            <h3>Empfohlene Klimmzugstangen für Zuhause</h3>
+            <p>
+                In meiner Übersicht findest du bewährte Klimmzugstangen für verschiedene
+                Wohnsituationen – vom Einsteiger bis zum Fortgeschrittenen.
+            </p>
+            <a href="index.html#klimmzug" class="btn-primary">
+                Zu den Klimmzugstangen-Empfehlungen
+            </a>
+        </div>
+
         <h2>Welche Klimmzugstange ist für Anfänger geeignet?</h2>
         <p>
             Anfänger sollten auf eine Klimmzugstange setzen, die sich einfach montieren lässt
@@ -325,17 +358,6 @@
             <li>Unterschätzung der benötigten Belastbarkeit</li>
             <li>Billige Modelle ohne Sicherheitsreserven</li>
         </ul>
-
-        <div class="cta-box">
-            <h3>Empfohlene Klimmzugstangen für Zuhause</h3>
-            <p>
-                In meiner Übersicht findest du bewährte Klimmzugstangen für verschiedene
-                Wohnsituationen – vom Einsteiger bis zum Fortgeschrittenen.
-            </p>
-            <a href="index.html#klimmzug" class="btn-primary">
-                Zu den Klimmzugstangen-Empfehlungen
-            </a>
-        </div>
 
         <h2>Fazit</h2>
         <p>
