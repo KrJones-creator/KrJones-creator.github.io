@@ -985,25 +985,42 @@
   </footer>
   
 
-
 <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // === Jahr im Footer (nur wenn Element existiert) ===
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 
-    // Hamburger Toggle
+    // === Hamburger Navigation ===
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.querySelector('.nav-menu');
     const overlay = document.querySelector('.nav-overlay');
 
-    toggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
-        overlay.classList.toggle('active');
-    });
+    // Sicherheitscheck (verhindert JS-Abbruch)
+    if (toggle && menu && overlay) {
 
-    overlay.addEventListener('click', () => {
-        menu.classList.remove('active');
-        overlay.classList.remove('active');
-    });
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            menu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        // Optional: ESC schließt Menü
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                menu.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+    }
 </script>
+
 
 </body>
 </html>
+
