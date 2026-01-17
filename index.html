@@ -303,22 +303,111 @@
         .faq-item h3 { font-size: 1.125rem; margin-bottom: 0.5rem; }
 
         /* === Footer === */
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 1.5rem 0;
-            font-size: 0.85rem;
-            color: var(--muted);
-            background: #fff;
-            text-align: center;
+        .footer {
+        background: #fff;
+        border-top: 1px solid #e5e7eb;
+        padding: 2.5rem 0;
+        color: #111827;
         }
 
-        footer a {
-            color: var(--muted);
-            text-decoration: none;
-            margin: 0 0.25rem;
+        .footer__container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
         }
 
-        footer a:hover { text-decoration: underline; }
+        .footer__top {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+        align-items: center;
+        flex-wrap: wrap;
+        }
+
+        .footer__brand {
+        max-width: 520px;
+        }
+
+        .footer__logo {
+        font-weight: 800;
+        font-size: 1.15rem;
+        letter-spacing: 0.02em;
+        }
+
+        .footer__text {
+        margin-top: 0.4rem;
+        color: #6b7280;
+        font-size: 0.95rem;
+        }
+
+        .footer__social {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        }
+
+        .footer__social-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        text-decoration: none;
+        color: #111827;
+        font-weight: 700;
+        padding: 0.65rem 0.9rem;
+        border-radius: 999px;
+        border: 1px solid #e5e7eb;
+        background: #f9fafb;
+        transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .footer__social-link:hover {
+        transform: translateY(-2px);
+        background: #f3f4f6;
+        }
+
+        .footer__icon {
+        width: 30px;
+        height: 30px;
+        fill: #111827;
+        }
+
+        .footer__bottom {
+        margin-top: 1.8rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+        }
+
+        .footer__links {
+        display: flex;
+        gap: 1rem;
+        font-weight: 600;
+        }
+
+        .footer__links a {
+        color: #6b7280;
+        text-decoration: none;
+        }
+
+        .footer__links a:hover {
+        color: #111827;
+        text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 720px) {
+        .footer__top {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer__bottom {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        }
 
         /* Überschriften innerhalb des Menüs */
         .nav-menu .menu-heading {
@@ -867,15 +956,35 @@
 
 </main>
 
-<footer>
-    <div class="container">
-        <p>
-            © <span id="year"></span> Home-Workout Guide ·
-            <a href="Impressum.html">Impressum</a> |
-            <a href="Datenschutzerklärung.html">Datenschutz</a>
-        </p>
+<footer class="footer">
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">Home-Workout Guide</div>
+          <div class="footer__text">
+            Tipps & Produktempfehlungen für dein Training zu Hause.
+          </div>
+        </div>
+  
+        <div class="footer__social">
+            <a class="footer__social-link" href="https://www.tiktok.com/@krjonescreator" target="_blank" rel="noopener noreferrer">
+                <img class="footer__icon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F018%2F910%2F704%2Foriginal%2Ftiktok-logo-tiktok-symbol-tiktok-icon-free-free-vector.jpg&f=1&nofb=1&ipt=b4a75ce603c2314e90c6fddfc72f8736602399a1ae95afee0b666afd1296b06d" alt="TikTok Logo">
+                <span>TikTok</span>
+              </a>
+        </div>
+      </div>
+  
+      <div class="footer__bottom">
+        <div class="footer__links">
+          <a href="Impressum.html">Impressum</a>
+          <a href="Datenschutzerklärung.html">Datenschutz</a>
+        </div>
+  
+      </div>
     </div>
-</footer>
+  </footer>
+  
+
 
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
